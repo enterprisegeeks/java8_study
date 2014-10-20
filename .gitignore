@@ -1,0 +1,5 @@
+target/*
+.settings/
+log.txt
+*.iml
+.idea/
