@@ -72,7 +72,11 @@ public class ZipPractice {
         */
         List<Integer> an = Arrays.asList(1,2,4,7,11,16,22);
         
-       List<Integer> diff = null;//zip(/** nullを削除し、答えを記述 */);
+        // 1つ飛ばしたanと、anでzipすると、前後の要素のペアができる。
+        List<Integer> diff = zip(an.stream().skip(1), an.stream())
+               .map(p -> p.one - p.two)
+               .collect(Collectors.toList());
+
                 
         // [1,2,3,4,5,6]となるはず。
         System.out.println(diff);

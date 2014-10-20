@@ -7,7 +7,6 @@ import java.util.Optional;
  * @author kentaro.maeda
  */
 public class Test {
-    /* 解答記述の際にコメントアウトをはずしてください、
     public static void main(String[] args) {
         
         OptionalMap<String, String> shiritori = new OptionalHashMap<String, String>(){{
@@ -23,7 +22,7 @@ public class Test {
        System.out.println(shiritori.getByOpt("ぱんだ").orElse("なかった"));
         
         //3回しりとりが続けれるか?
-        String start = "ごりら"; // 適宜変えてみてください。
+        String start = "しりとり"; // 適宜変えてみてください。
         Optional<String> res = shiritori.getByOpt(start)
                .flatMap(shiritori::getByOpt)
                 .flatMap(shiritori::getByOpt);
@@ -34,5 +33,5 @@ public class Test {
             System.out.println(start + "から3回つづけられませんでした。");
         }
    }
-    */
+    
 }

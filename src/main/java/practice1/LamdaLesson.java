@@ -31,13 +31,7 @@ public class LamdaLesson {
           add(1);
         }};
         // 匿名クラス = ラムダ式なので書き換え可能。
-        Collections.sort(list, new Comparator<Integer>(){
-
-            @Override
-            public int compare(Integer x, Integer y) {
-                return x - y;
-            }
-        });
+        Collections.sort(list, (Integer x, Integer y) -> x - y);
         
         System.out.println(list);
     }
@@ -46,8 +40,8 @@ public class LamdaLesson {
     public static void lesson2() {
         List<Emp> empList = new ArrayList<>(TestData.allEmployees());
         
-        Collections.sort(empList, null/* ここに解答を書いてください。 */);
-        
+        Collections.sort(empList, (x,y) -> x.getName().compareTo(y.getName()));
+
         System.out.println(empList);
         
     }

@@ -20,16 +20,18 @@ public class LetsMakeHFO {
     /**
      * CSVファイルから任意のオブジェクトの一覧へ変換する。
      * 本来であればIOリソースとすべきだが、単純化するため文字列リストをファイルの内容と見立てています。
-     */
+     */ 
     public static <R> List<R> readCsv(List<String> csvLines, LineToObject<R> lambda) {
+    //Functionを用いて、以下でもよい。
+    //public static <R> List<R> readCsv(List<String> csvLines, Function<String[],R> lambda) { 
         List<R> list = new ArrayList<>();
         
         // 1行ずつカンマで分割し、ラムダ式の内容でR型へ変換する。
         for (String line : csvLines) {
             String[] items = line.split(",");
             
-            /*以降、コードが正しく動作するようにコードを書いてください。 */
-            
+            R r = lambda.apply(items);
+            list.add(r);
         }
         return list;
     }
