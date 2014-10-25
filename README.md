@@ -68,3 +68,6 @@ NetBeansのメニューにある実行ボタンは、プロジェクトの中の
   解答は、このページのanswerブランチで後で公開します。
 
   公開後、ブランチをmasterからanswerに切り替え、ブラウザで見るかダウンロードしてください。
+  
+  [解答ブランチ](https://github.com/enterprisegeeks/java8_study/tree/answer)
+  
